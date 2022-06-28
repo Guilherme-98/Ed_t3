@@ -1,2 +1,2 @@
 # Ed_t3
-Terceiro projeto da disciplina Estrutura de dados
+Terceiro projeto da disciplina Estrutura de Dados
