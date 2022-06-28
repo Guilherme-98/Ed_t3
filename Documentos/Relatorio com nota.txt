@@ -1,0 +1,355 @@
+TESTES: 22/22    9,5
+
+
+IMPLEMENTAÇÃO:
+
+- lista.h: misturou operações específicas da aplicação no módulo lista.   -0.5
+
+evb@spica ~/Dropbox/ED/CorrTrab/2020/t3 $ python3 ct.py -z -p gabrielpgs-guilhermehgs
+Executando
+#######
+## CORRECAO TRABALHO 3 INICIADA
+#################
+
+
+.[2020-12-30T12:37:53.466746].
+gcc -g -c main.c -o main.o
+gcc -g -c argumentos.c -o argumentos.o
+gcc -g -c arquivos.c -o arquivos.o
+gcc -g -c leitura_geo.c -o leitura_geo.o
+gcc -g -c svg.c -o svg.o
+gcc -g -c leitura_gry.c -o leitura_gry.o
+gcc -g -c consultas.c -o consultas.o
+gcc -g -c util.c -o util.o
+gcc -g -c elementos/quadra.c -o elementos/quadra.o
+gcc -g -c lista.c -o lista.o
+gcc -g -c elementos/texto.c -o elementos/texto.o
+gcc -g -c elementos/hidrante.c -o elementos/hidrante.o
+gcc -g -c elementos/semaforo.c -o elementos/semaforo.o
+gcc -g -c elementos/radioBase.c -o elementos/radioBase.o
+gcc -g -c elementos/forma.c -o elementos/forma.o
+gcc -g -c elementos/posto.c -o elementos/posto.o
+gcc -g -c elementos/casos.c -o elementos/casos.o
+gcc -g -c elementos/casosDentro.c -o elementos/casosDentro.o
+gcc -g -c shell_sort.c -o shell_sort.o
+gcc -g -c quick_sort.c -o quick_sort.o
+gcc main.o argumentos.o arquivos.o leitura_geo.o svg.o leitura_gry.o consultas.o util.o elementos/quadra.o lista.o  elementos/texto.o  elementos/hidrante.o elementos/semaforo.o elementos/radioBase.o elementos/forma.o elementos/posto.o elementos/casos.o elementos/casosDentro.o shell_sort.o quick_sort.o -std=c99 -fstack-protector-all -g -lm  -o siguel
+*** Error in `/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel': double free or corruption (fasttop): 0x08657110 ***
+======= Backtrace: =========
+/lib/i386-linux-gnu/libc.so.6(+0x67387)[0xb75d0387]
+/lib/i386-linux-gnu/libc.so.6(+0x6d307)[0xb75d6307]
+/lib/i386-linux-gnu/libc.so.6(+0x6dc41)[0xb75d6c41]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8052b0a]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8051e1a]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8049184]
+/lib/i386-linux-gnu/libc.so.6(__libc_start_main+0xf7)[0xb7581647]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8048861]
+======= Memory map: ========
+08048000-08056000 r-xp 00000000 08:06 1232075    /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel
+08056000-08057000 r--p 0000d000 08:06 1232075    /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel
+08057000-08058000 rw-p 0000e000 08:06 1232075    /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel
+08637000-08679000 rw-p 00000000 00:00 0          [heap]
+b7400000-b7421000 rw-p 00000000 00:00 0 
+b7421000-b7500000 ---p 00000000 00:00 0 
+b7568000-b7569000 rw-p 00000000 00:00 0 
+b7569000-b7719000 r-xp 00000000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b7719000-b771a000 ---p 001b0000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b771a000-b771c000 r--p 001b0000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b771c000-b771d000 rw-p 001b2000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b771d000-b7720000 rw-p 00000000 00:00 0 
+b7720000-b7773000 r-xp 00000000 08:06 1575214    /lib/i386-linux-gnu/libm-2.23.so
+b7773000-b7774000 r--p 00052000 08:06 1575214    /lib/i386-linux-gnu/libm-2.23.so
+b7774000-b7775000 rw-p 00053000 08:06 1575214    /lib/i386-linux-gnu/libm-2.23.so
+b7779000-b7795000 r-xp 00000000 08:06 1571344    /lib/i386-linux-gnu/libgcc_s.so.1
+b7795000-b7796000 rw-p 0001b000 08:06 1571344    /lib/i386-linux-gnu/libgcc_s.so.1
+b7796000-b7798000 rw-p 00000000 00:00 0 
+b7798000-b779a000 r--p 00000000 00:00 0          [vvar]
+b779a000-b779b000 r-xp 00000000 00:00 0          [vdso]
+b779b000-b77be000 r-xp 00000000 08:06 1575336    /lib/i386-linux-gnu/ld-2.23.so
+b77be000-b77bf000 r--p 00022000 08:06 1575336    /lib/i386-linux-gnu/ld-2.23.so
+b77bf000-b77c0000 rw-p 00023000 08:06 1575336    /lib/i386-linux-gnu/ld-2.23.so
+bfe9f000-bfec0000 rw-p 00000000 00:00 0          [stack]
+Aborted
+*** Error in `/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel': double free or corruption (fasttop): 0x08ef0110 ***
+======= Backtrace: =========
+/lib/i386-linux-gnu/libc.so.6(+0x67387)[0xb753a387]
+/lib/i386-linux-gnu/libc.so.6(+0x6d307)[0xb7540307]
+/lib/i386-linux-gnu/libc.so.6(+0x6dc41)[0xb7540c41]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8052b0a]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8051e1a]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8049184]
+/lib/i386-linux-gnu/libc.so.6(__libc_start_main+0xf7)[0xb74eb647]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8048861]
+======= Memory map: ========
+08048000-08056000 r-xp 00000000 08:06 1232075    /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel
+08056000-08057000 r--p 0000d000 08:06 1232075    /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel
+08057000-08058000 rw-p 0000e000 08:06 1232075    /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel
+08ed0000-08f12000 rw-p 00000000 00:00 0          [heap]
+b7300000-b7321000 rw-p 00000000 00:00 0 
+b7321000-b7400000 ---p 00000000 00:00 0 
+b74d2000-b74d3000 rw-p 00000000 00:00 0 
+b74d3000-b7683000 r-xp 00000000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b7683000-b7684000 ---p 001b0000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b7684000-b7686000 r--p 001b0000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b7686000-b7687000 rw-p 001b2000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b7687000-b768a000 rw-p 00000000 00:00 0 
+b768a000-b76dd000 r-xp 00000000 08:06 1575214    /lib/i386-linux-gnu/libm-2.23.so
+b76dd000-b76de000 r--p 00052000 08:06 1575214    /lib/i386-linux-gnu/libm-2.23.so
+b76de000-b76df000 rw-p 00053000 08:06 1575214    /lib/i386-linux-gnu/libm-2.23.so
+b76e3000-b76ff000 r-xp 00000000 08:06 1571344    /lib/i386-linux-gnu/libgcc_s.so.1
+b76ff000-b7700000 rw-p 0001b000 08:06 1571344    /lib/i386-linux-gnu/libgcc_s.so.1
+b7700000-b7702000 rw-p 00000000 00:00 0 
+b7702000-b7704000 r--p 00000000 00:00 0          [vvar]
+b7704000-b7705000 r-xp 00000000 00:00 0          [vdso]
+b7705000-b7728000 r-xp 00000000 08:06 1575336    /lib/i386-linux-gnu/ld-2.23.so
+b7728000-b7729000 r--p 00022000 08:06 1575336    /lib/i386-linux-gnu/ld-2.23.so
+b7729000-b772a000 rw-p 00023000 08:06 1575336    /lib/i386-linux-gnu/ld-2.23.so
+bf900000-bf921000 rw-p 00000000 00:00 0          [stack]
+Aborted
+*** Error in `/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel': double free or corruption (fasttop): 0x0a070110 ***
+======= Backtrace: =========
+/lib/i386-linux-gnu/libc.so.6(+0x67387)[0xb75f0387]
+/lib/i386-linux-gnu/libc.so.6(+0x6d307)[0xb75f6307]
+/lib/i386-linux-gnu/libc.so.6(+0x6dc41)[0xb75f6c41]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8052b0a]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8051e1a]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8049184]
+/lib/i386-linux-gnu/libc.so.6(__libc_start_main+0xf7)[0xb75a1647]
+/home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel[0x8048861]
+======= Memory map: ========
+08048000-08056000 r-xp 00000000 08:06 1232075    /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel
+08056000-08057000 r--p 0000d000 08:06 1232075    /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel
+08057000-08058000 rw-p 0000e000 08:06 1232075    /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel
+0a050000-0a092000 rw-p 00000000 00:00 0          [heap]
+b7400000-b7421000 rw-p 00000000 00:00 0 
+b7421000-b7500000 ---p 00000000 00:00 0 
+b7588000-b7589000 rw-p 00000000 00:00 0 
+b7589000-b7739000 r-xp 00000000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b7739000-b773a000 ---p 001b0000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b773a000-b773c000 r--p 001b0000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b773c000-b773d000 rw-p 001b2000 08:06 1575137    /lib/i386-linux-gnu/libc-2.23.so
+b773d000-b7740000 rw-p 00000000 00:00 0 
+b7740000-b7793000 r-xp 00000000 08:06 1575214    /lib/i386-linux-gnu/libm-2.23.so
+b7793000-b7794000 r--p 00052000 08:06 1575214    /lib/i386-linux-gnu/libm-2.23.so
+b7794000-b7795000 rw-p 00053000 08:06 1575214    /lib/i386-linux-gnu/libm-2.23.so
+b7799000-b77b5000 r-xp 00000000 08:06 1571344    /lib/i386-linux-gnu/libgcc_s.so.1
+b77b5000-b77b6000 rw-p 0001b000 08:06 1571344    /lib/i386-linux-gnu/libgcc_s.so.1
+b77b6000-b77b8000 rw-p 00000000 00:00 0 
+b77b8000-b77ba000 r--p 00000000 00:00 0          [vvar]
+b77ba000-b77bb000 r-xp 00000000 00:00 0          [vdso]
+b77bb000-b77de000 r-xp 00000000 08:06 1575336    /lib/i386-linux-gnu/ld-2.23.so
+b77de000-b77df000 r--p 00022000 08:06 1575336    /lib/i386-linux-gnu/ld-2.23.so
+b77df000-b77e0000 rw-p 00023000 08:06 1575336    /lib/i386-linux-gnu/ld-2.23.so
+bf86a000-bf88b000 rw-p 00000000 00:00 0          [stack]
+Aborted
+Segmentation fault
+Segmentation fault
+evb@spica ~/Dropbox/ED/CorrTrab/2020/t3 $ 
+
+
+
+##
+## COMPILANDO  AS SUBMISSOES
+##
+
+====> COMPILANDO: gabrielpgs-guilhermehgs
+
+## COMPILANDO SUBMISSAO DO ALUNO: /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src
+   > removendo .o pre-existentes 
+  > compilando
+.[2020-12-30T12:37:53.472722].
+.[2020-12-30T12:37:55.643074].
+##
+## TESTANDO AS SUBMISSOES
+##
+
+====> TESTANDO: gabrielpgs-guilhermehgs
+
+===== EXECUTANDO TESTES: 
+    > dir_tst:/home/evb/Dropbox/ED/CorrTrab/2020/t3/t
+    > dir saida: /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o
+    > prog: /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel
+    > ecpm: False
+    > comVias: False
+    > comBd: False
+   > removendo arquivos  pre-existentes: /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o  *.txt 
+
+   > removendo arquivos  pre-existentes: /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o  *.svg 
+
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b1-bsc-000.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo   
+
+.[2020-12-30T12:37:55.645893].
+   > nomearq: b1-bsc-000 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b1-bsc-000 
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/ci-r-230.qry
+
+.[2020-12-30T12:37:55.656222].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/soc-2.qry
+
+.[2020-12-30T12:37:55.673133].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/ci-r-172.qry
+
+.[2020-12-30T12:37:55.701876].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/crd-1.qry
+
+.[2020-12-30T12:37:55.735329].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/soc-5.qry
+
+.[2020-12-30T12:37:55.761409].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/dq-02.qry
+
+.[2020-12-30T12:37:55.789509].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/cbq-1.qry
+
+.[2020-12-30T12:37:55.816270].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/ci-r-57.qry
+
+.[2020-12-30T12:37:55.845676].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/soc-4.qry
+
+.[2020-12-30T12:37:55.900439].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/ci-r-287.qry
+
+.[2020-12-30T12:37:55.915940].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/carcima.qry
+
+.[2020-12-30T12:37:55.984008].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/cv.qry
+
+.[2020-12-30T12:37:56.018681].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/ci-r-115.qry
+
+.[2020-12-30T12:37:56.055873].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/del.qry
+
+.[2020-12-30T12:37:56.071676].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/crd-4.qry
+
+.[2020-12-30T12:37:56.088044].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/crd-3.qry
+
+.[2020-12-30T12:37:56.103756].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/soc-1.qry
+
+.[2020-12-30T12:37:56.120223].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/crd-2.qry
+
+.[2020-12-30T12:37:56.135915].
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-0ps-20hkmbsc-001.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-20hkmbsc-001.geo   
+
+.[2020-12-30T12:37:56.151242].
+   > nomearq: b2-0ps-20hkmbsc-001 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-0ps-20hkmbsc-001 
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-20hkmbsc-001.geo    -q b2-0ps-20hkmbsc-001/ci-r-1442.qry
+
+.[2020-12-30T12:37:56.197399].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-20hkmbsc-001.geo    -q b2-0ps-20hkmbsc-001/soc-5.qry
+
+.[2020-12-30T12:37:56.293518].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-20hkmbsc-001.geo    -q b2-0ps-20hkmbsc-001/ci-r-2404.qry
+
+.[2020-12-30T12:37:56.484000].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-20hkmbsc-001.geo    -q b2-0ps-20hkmbsc-001/soc-3.qry
+
+.[2020-12-30T12:37:56.662770].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-20hkmbsc-001.geo    -q b2-0ps-20hkmbsc-001/ci-r-961.qry
+
+.[2020-12-30T12:37:56.782886].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-20hkmbsc-001.geo    -q b2-0ps-20hkmbsc-001/ci-r-480.qry
+
+.[2020-12-30T12:37:56.872769].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-20hkmbsc-001.geo    -q b2-0ps-20hkmbsc-001/ci-r-1923.qry
+
+.[2020-12-30T12:37:56.921706].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-20hkmbsc-001.geo    -q b2-0ps-20hkmbsc-001/del.qry
+
+.[2020-12-30T12:37:57.071329].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-20hkmbsc-001.geo    -q b2-0ps-20hkmbsc-001/soc-1.qry
+
+.[2020-12-30T12:37:57.184853].
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-0ps-500hkmbsc-001.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-500hkmbsc-001.geo   
+
+.[2020-12-30T12:37:57.270531].
+   > nomearq: b2-0ps-500hkmbsc-001 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-0ps-500hkmbsc-001 
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-500hkmbsc-001.geo    -q b2-0ps-500hkmbsc-001/soc-2.qry
+
+.[2020-12-30T12:37:57.321387].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-500hkmbsc-001.geo    -q b2-0ps-500hkmbsc-001/ci-r-1442.qry
+
+.[2020-12-30T12:37:57.436517].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-500hkmbsc-001.geo    -q b2-0ps-500hkmbsc-001/soc-4.qry
+
+.[2020-12-30T12:37:57.584280].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-500hkmbsc-001.geo    -q b2-0ps-500hkmbsc-001/soc-6.qry
+
+.[2020-12-30T12:37:57.746937].
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-0ps-bsc-001.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-bsc-001.geo   
+
+.[2020-12-30T12:37:57.981988].
+   > nomearq: b2-0ps-bsc-001 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-0ps-bsc-001 
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-bsc-001.geo    -q b2-0ps-bsc-001/soc-2.qry
+
+.[2020-12-30T12:37:58.034217].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-0ps-bsc-001.geo    -q b2-0ps-bsc-001/ci-r-480.qry
+
+.[2020-12-30T12:37:58.117735].
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-2000ps-bsc-001.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-2000ps-bsc-001.geo   
+
+.[2020-12-30T12:37:58.233360].
+   > nomearq: b2-2000ps-bsc-001 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-2000ps-bsc-001 
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-2000ps-bsc-001.geo    -q b2-2000ps-bsc-001/soc-5.qry
+
+.[2020-12-30T12:37:58.302027].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-2000ps-bsc-001.geo    -q b2-2000ps-bsc-001/soc-6.qry
+
+.[2020-12-30T12:37:58.448039].
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-500ps-bsc-001.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-500ps-bsc-001.geo   
+
+.[2020-12-30T12:37:58.645650].
+   > nomearq: b2-500ps-bsc-001 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-500ps-bsc-001 
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-500ps-bsc-001.geo    -q b2-500ps-bsc-001/soc-4.qry
+
+.[2020-12-30T12:37:58.700519].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-500ps-bsc-001.geo    -q b2-500ps-bsc-001/soc-6.qry
+
+.[2020-12-30T12:37:58.791965].
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-50ps-bsc-001.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-50ps-bsc-001.geo   
+
+.[2020-12-30T12:37:58.948530].
+   > nomearq: b2-50ps-bsc-001 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b2-50ps-bsc-001 
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-50ps-bsc-001.geo    -q b2-50ps-bsc-001/soc-2.qry
+
+.[2020-12-30T12:37:58.994474].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-50ps-bsc-001.geo    -q b2-50ps-bsc-001/ci-r-961.qry
+
+.[2020-12-30T12:37:59.082598].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b2-50ps-bsc-001.geo    -q b2-50ps-bsc-001/soc-4.qry
+
+.[2020-12-30T12:37:59.230136].
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b4-bsc-001.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t3/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t3/alunos/gabrielpgs-guilhermehgs/o -f b4-bsc-001.geo   
+
+.[2020-12-30T12:37:59.370061].
+   > nomearq: b4-bsc-001 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t3/t/b4-bsc-001 
+================================
